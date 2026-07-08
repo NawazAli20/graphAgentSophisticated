@@ -8,7 +8,8 @@ Weather_API_Key = os.getenv("OPENWEATHER_API_KEY")
 
 from langchain.chat_models import init_chat_model
 
-llm = init_chat_model(model="llama-3.1-8b-instant", model_provider="Groq")
+#llm = init_chat_model(model="llama-3.3-70b-versatile", model_provider="Groq")
+llm = init_chat_model(model="gpt-5.4-mini", model_provider="OpenAI")
 print(llm.invoke("Hi").content)
 
 ## Create a weather tool 
@@ -33,7 +34,7 @@ def getWeather(location:str, zipcode:str)->str:
     except:
         return f"The requested weather information is not available"
 
-llm_with_tools = llm.bind_tools([getWeather])
+
 
 # Search tool using Tavily 
 from langchain_tavily import TavilySearch
@@ -44,14 +45,16 @@ web_search = TavilySearch(
     search_depth="basic"
 )
 
+llm_with_tools = llm.bind_tools([getWeather,web_search])
+
 ##Create the weather app 
 from langchain.messages import HumanMessage, SystemMessage, AIMessage
 
 messages = [
     SystemMessage(content="You are an helpful assistant. " \
-    "Please respond the weather information based on the get_weather tool call concisely" \
+    "Please respond the weather information based on the getWeather tool call" \
     "For internet search and current information and news use web_search tool" \
-    "For other information you don't need to call a tool, just use the llm model")
+    "For other information you don't need to call a tool")
 ]
 
 user_input = input("What is your query? ")
