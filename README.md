@@ -1,5 +1,5 @@
 # LLM Agent
-LLM Agent Chatbot is implemeted in ./LLMsIntro/agentWithTools.py
+LLM Agent Chatbot is implemeted in ./Agents/LLMAgentChatBot.py
 
 ## Install Langchain-tavily
 uv add langchain-tavily
@@ -10,7 +10,7 @@ uv add langchain-community duckduckgo-search ddgs
 
 ### How to run 
 
-uv run agentWithTools.py
+uv run LLMAgentChatBot.py
 
 # Repo and Dependencies Installations commands 
 
