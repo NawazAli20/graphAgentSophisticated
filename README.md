@@ -1,5 +1,5 @@
 # LLM Agent
-LLM Agent Chatbot is implemeted in ./Agents/LLMAgentChatBot.py
+LLM Agent with multiple tools and short-term memory for Chatbot is implemeted in ./Agents/agentWithToolsnMemory.py
 
 ## Install Langchain-tavily
 uv add langchain-tavily
@@ -10,12 +10,13 @@ uv add langchain-community duckduckgo-search ddgs
 
 ### How to run 
 
-uv run LLMAgentChatBot.py
+uv run agentWithToolsnMemory.py
 
 # Repo and Dependencies Installations commands 
 
 Resource Links:
 - [Complete youtube playlist](https://www.youtube.com/playlist?list=PLfpB0rPkNb_8)
+- [Langgraph's short-term memory](https://docs.langchain.com/oss/python/langchain/short-term-memory) 
 - [Langchain Agent](https://docs.langchain.com/oss/python/langchain/agents)
 - [DuckDuckGoSearch](https://reference.langchain.com/python/langchain-community/tools/ddg_search/tool/DuckDuckGoSearchRun)
 - [Youdotcom API Key](https://you.com/platform/api-keys) 
