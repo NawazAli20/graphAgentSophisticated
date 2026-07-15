@@ -1,8 +1,8 @@
 # LLM Agent
-LLM Agent with memory and middleware for a smarter and sophisticated Chatbot is implemeted in ./Agents/agentWithMemory.py
+LLM Agent with memory and PII (Personally Identifiable Information) and model fallback middlewares for a smarter and sophisticated Chatbot is implemeted in ./Agents/agentWithPIIM.py
 
 ## Import Middleware
-from langchain.agents.middleware import SummerizationMiddleware
+from langchain.agents.middleware import PIIMiddleware, SummarizationMiddleware, ModelFallbackMiddleware
 
 ## Install Langchain-community
 uv add langchain-community duckduckgo-search ddgs
@@ -10,12 +10,13 @@ uv add langchain-community duckduckgo-search ddgs
 
 ### How to run 
 
-uv run agentWithMiddleware.py
+uv run agentWithPIIM.py
 
 # Repo and Dependencies Installations commands 
 
 Resource Links:
 - [Complete youtube playlist](https://www.youtube.com/playlist?list=PLfpB0rPkNb_8)
+- [Langchain's Pre-build Middlware](https://docs.langchain.com/oss/python/langchain/middleware/built-in)
 - [Langchain's middleware](https://docs.langchain.com/oss/python/langchain/middleware/overview)
 - [Langgraph's short-term memory](https://docs.langchain.com/oss/python/langchain/short-term-memory) 
 - [Langchain Agent](https://docs.langchain.com/oss/python/langchain/agents)
