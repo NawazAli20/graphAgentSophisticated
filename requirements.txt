@@ -6,4 +6,5 @@ ipykernel
 python-dotenv
 langchain-tavily
 duckduckgo-search
-langchain-youdotcom 
+langchain-youdotcom
+langgraph 
