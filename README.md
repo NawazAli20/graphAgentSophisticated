@@ -1,21 +1,17 @@
-# LLM Agent
-LLM Agent with memory and PII (Personally Identifiable Information) and model fallback middlewares for a smarter and sophisticated Chatbot is implemeted in ./Agents/agentWithPIIM.py
 
-## Import Middleware
-from langchain.agents.middleware import PIIMiddleware, SummarizationMiddleware, ModelFallbackMiddleware
-
-## Install Langchain-community
-uv add langchain-community duckduckgo-search ddgs
+# A simple StateGraph Example 
+A MessageState graph is created inside Agents/graphExample.ipynb
 
 
 ### How to run 
 
-uv run agentWithPIIM.py
+run all cells in jupyter notebook 
 
 # Repo and Dependencies Installations commands 
 
 Resource Links:
 - [Complete youtube playlist](https://www.youtube.com/playlist?list=PLfpB0rPkNb_8)
+- [Langgraph docs](https://docs.langchain.com/oss/python/langgraph/overview)
 - [Langchain's Pre-build Middlware](https://docs.langchain.com/oss/python/langchain/middleware/built-in)
 - [Langchain's middleware](https://docs.langchain.com/oss/python/langchain/middleware/overview)
 - [Langgraph's short-term memory](https://docs.langchain.com/oss/python/langchain/short-term-memory) 
