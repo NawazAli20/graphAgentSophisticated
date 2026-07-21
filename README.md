@@ -1,11 +1,14 @@
 
 # A simple StateGraph Example 
-A MessageState graph is created inside Agents/graphExample.ipynb
+A MessageState graph is created inside Agents/LangGraphExample.py
 
 
 ### How to run 
 
-run all cells in jupyter notebook 
+uv run LangGraphExample.py (for .py file)
+
+run all cells in jupyter notebook (for .ipynb file)
+
 
 # Repo and Dependencies Installations commands 
 
