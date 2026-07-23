@@ -1,6 +1,6 @@
 
 # A simple StateGraph Example 
-A MessageState graph is created inside Agents/LangGraphExample.py
+A MessageState graph with tools is created inside Agents/graphAgentWithTools.py
 
 
 ### How to run 
