@@ -1,11 +1,11 @@
 
-# A simple StateGraph Example 
-A MessageState graph with tools is created inside Agents/graphAgentWithTools.py
+# A Sophisticated Langgraph Agent Example 
+A MessageState graph with tools and meory is created inside Agents/graphAgentSophiticated.py
 
 
 ### How to run 
 
-uv run LangGraphExample.py (for .py file)
+uv run graphAgentSophiticated.py (for .py file)
 
 run all cells in jupyter notebook (for .ipynb file)
 
@@ -14,6 +14,7 @@ run all cells in jupyter notebook (for .ipynb file)
 
 Resource Links:
 - [Complete youtube playlist](https://www.youtube.com/playlist?list=PLfpB0rPkNb_8)
+- [Langgraph memory](https://docs.langchain.com/oss/python/langgraph/add-memory#manage-checkpoints)
 - [Langgraph docs](https://docs.langchain.com/oss/python/langgraph/overview)
 - [Langchain's Pre-build Middlware](https://docs.langchain.com/oss/python/langchain/middleware/built-in)
 - [Langchain's middleware](https://docs.langchain.com/oss/python/langchain/middleware/overview)
