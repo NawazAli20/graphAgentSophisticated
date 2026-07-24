@@ -16,13 +16,7 @@ OPENWEATHER_API_KEY =os.getenv("OPENWEATHER_API_KEY")
 from openai import RateLimitError as OpenAIRateLimitError 
 from groq import RateLimitError as GroqRateLimitError
 
-# %%
-# from langchain_ollama import ChatOllama
 
-# llm_gemma = ChatOllama(
-#     model="gemma4:latest"
-# )
-# llm_gemma
 
 # %%
 # response = llm_gemma.invoke("What is LangGraph?")
@@ -39,8 +33,6 @@ fallback_llm_1 = init_chat_model(model="gpt-5.4-nano", model_provider="openai",
                  model_kwargs={"temperature": 0.5, "max_tokens": 1000})
 fallback_llm_2 = init_chat_model(model="gpt-5.4-mini", model_provider="openai",
                  model_kwargs={"temperature": 0.5, "max_tokens": 1000})
-
-llm_gemma
 
 # %% [markdown]
 # # Create a graph Agent
@@ -131,46 +123,6 @@ from langgraph.prebuilt import ToolNode, tools_condition
 
 tool_node_pre = ToolNode(tools)
 
-# %% [markdown]
-# # Create tool_node
-
-# %%
-
-def tool_node(state:MessagesState):
-    messages = state["messages"]
-    last_message = messages[-1]
-
-    tool_messages = []
-    for tool_call in last_message.tool_calls:
-        tool_name = tool_call["name"]
-        selected_tool = tool_names[tool_name]
-        tool_message = selected_tool.invoke(tool_call)
-
-        # if(tool_call["name"] == getWeather.name):
-        #     tool_message = getWeather.invoke(tool_call)
-        # elif (tool_call["name"] == web_search.name):
-        #     tool_message = web_search.invoke(tool_call)
-        
-
-        tool_messages.append(tool_message)
-
-
-    return {"messages":tool_messages}
-
-# %% [markdown]
-# # Create a conditional edge (llm -> tool)
-
-# %%
-
-def should_continue(state:MessagesState):
-    last_message = state["messages"][-1]
-
-    if(last_message.tool_calls):
-        return "tool_node"
-
-    return END
-
-# %%
 
 
 # %% [markdown]
