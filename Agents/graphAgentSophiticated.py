@@ -124,10 +124,6 @@ from langgraph.prebuilt import ToolNode, tools_condition
 tool_node_pre = ToolNode(tools)
 
 
-
-# %% [markdown]
-# # Generate the graph
-
 # %%
 ## Add short-term memory 
 from langgraph.checkpoint.memory import InMemorySaver
